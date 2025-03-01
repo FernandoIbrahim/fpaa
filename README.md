@@ -132,7 +132,7 @@ python3 main.py
 
 ## Fluxo de Controle da função
 
-![Descrição da imagem](imagens/grafo.png)
+![Descrição da imagem](images/grafo.png)
 
 ## Complexidade Ciclomática
 
