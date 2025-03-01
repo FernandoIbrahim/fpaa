@@ -132,7 +132,7 @@ python3 main.py
 
 ## Fluxo de Controle da função
 
-![Grafo Exemplo]([https://raw.githubusercontent.com/seu-usuario/seu-repositorio/main](https://github.com/FernandoIbrahim/fpaa-karatsuba/images/grafo.png)
+![Descrição da imagem](imagens/grafo.png)
 
 ## Complexidade Ciclomática
 
