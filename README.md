@@ -144,7 +144,7 @@ E = 16
 N = 14
 P = 1
 
-M = 16−14+2=4
+M = 16 − 14 + 2 = 4
 
 ## Complexidade Assintótica
 
