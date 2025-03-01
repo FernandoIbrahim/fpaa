@@ -138,9 +138,8 @@ Assim, utilizamos da formula de calculo da complexidade ciclomática (𝑀 = �
 
 Logo temos:
 
-E = 9
-N = 9
+E = 16
+N = 14
 P = 1
 
-M = 9 - 9 + 2
-M = 2
+M = 16−14+2=4
