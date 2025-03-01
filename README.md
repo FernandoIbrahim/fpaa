@@ -134,6 +134,8 @@ python3 main.py
 
 ![[Screenshot 2025-02-21 at 19.32.32.png]]
 
+## Complexidade Ciclomática
+
 Assim, utilizamos da formula de calculo da complexidade ciclomática (𝑀 = 𝐸 − 𝑁 + 2𝑃) para 
 
 Logo temos:
@@ -143,3 +145,10 @@ N = 14
 P = 1
 
 M = 16−14+2=4
+
+## Complexidade Assintótica
+
+- **Melhor caso:** \( O(1) \), quando um dos números tem apenas um dígito.  
+- **Caso médio/pior caso:** \( O(n^{\log 3}) \approx O(n^{1.585}) \), onde \( n \) é o número de dígitos nos números de entrada.  
+- **Complexidade de espaço:** \( O(n^{\log 3}) \).
+
