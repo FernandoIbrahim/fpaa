@@ -62,7 +62,7 @@ public class MaxMinSelection {
 }
 ```
 
-# **Atenálise da Complexidade pelo Teorema Mestre**
+# **Análise da Complexidade pelo Teorema Mestre**
 
 O algoritmo segue um padrão de **divisão e conquista**, e sua recorrência pode ser expressa como:  
 
@@ -75,9 +75,7 @@ onde:
 - **\(b = 2\)** → Cada chamada processa **metade do tamanho original**.  
 - **\(f(n) = O(1)\)** → O custo da etapa de combinação (comparação de máximos e mínimos) é constante.  
 
-## **Aplicação do Teorema Mestre**  
-
-O Teorema Mestre avalia a complexidade de recorrências da forma:  
+ avaliamos a complexidade de recorrências da forma:  
 
 ```
 T(n) = aT(n/b) + f(n)
@@ -91,7 +89,55 @@ n^log_b a = n^log_2 2 = n^1 = n
 
 Agora, comparamos ``f(n) com  n^log_b a``:  
 
-
 Como \( f(n) = O(1) \) é menor que \( n^1 \), o problema se encaixa no **Caso 1**, e a complexidade assintótica é:  
 
 T(n) = O(n).
+
+# **Análise da Complexidade Contagem de Operações**
+
+O algoritmo divide recursivamente o array em duas metades até que os subarrays contenham apenas um ou dois elementos. Para cada divisão, ele realiza comparações para combinar os valores máximo e mínimo de cada metade.
+
+• **Divisão:** O array de tamanho n é dividido em duas metades de tamanho n/2.
+- Cada divisão da origem outras 2 chamadas da mesma função
+
+```
+C(n) = 2C(n/2);
+```
+
+``` java
+   public static int[] maxMinSelect(int[] arr, int start, int end) {
+1        if (start == end) {
+           return new int[]{arr[start], arr[start]};
+         }
+
+2        int mid = (start + end) / 2;
+3        int[] left = maxMinSelect(arr, start, mid);
+4        int[] right = maxMinSelect(arr, mid + 1, end);
+
+5        return findMaxMin(left, right);
+    }
+```
+
+Pior caso:
+
+1- Comparação `if (start == end)` (1)
+2- atribuição `mid (start + end) / 2; (3)
+3- atribuição `left = Calculo maxMinSelect` (1)
+4-  atribuição `right = Calculo maxMinSelect` (1)
+
+5- retorno com a chamada do método `findMaxMin()` (1)  + (5) do método;
+
+
+```java
+    public static int[] findMaxMin(int[] left, int[] right) {
+1        int max = Math.max(left[0], right[0]);
+2        int min = Math.min(left[1], right[1]);
+3        return new int[]{max, min};
+    }
+
+```
+
+
+1-Atribuição e Comparação (2)
+2-Atribuição e Comparação  (2)
+3- retorno; (1)
